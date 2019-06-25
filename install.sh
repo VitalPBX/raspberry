@@ -32,6 +32,10 @@ then
   sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
 fi
 
+#Automatically Expand Partition
+/usr/bin/rootfs-expand
+df -h
+
 #Clean Yum Cache
 yum clean all
 rm -rf /var/cache/yum
