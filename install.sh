@@ -32,10 +32,6 @@ then
   sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
 fi
 
-#Automatically Expand Partition
-/usr/bin/rootfs-expand
-df -h
-
 #Clean Yum Cache
 yum clean all
 rm -rf /var/cache/yum
@@ -61,9 +57,10 @@ rm -rf pack_list
 wget https://raw.githubusercontent.com/VitalPBX/raspberry/master/resources/pack_list
 yum -y install $(cat pack_list)
 
-rm -rf /usr/lib/libstdc++.so.6.0.19
-wget -P /usr/lib/ https://raw.githubusercontent.com/VitalPBX/raspberry/master/resources/libstdc++.so.6.0.19
-chmod +x /usr/lib/libstdc++.so.6.0.19
+rm -rf /usr/lib/libstdc++.so.6.0.22
+wget -P /usr/lib/ https://raw.githubusercontent.com/VitalPBX/raspberry/master/resources/libstdc++.so.6.0.22
+chmod +x /usr/lib/libstdc++.so.6.0.22
+ln -sf /usr/lib/libstdc++.so.6.0.22 /usr/lib/libstdc++.so.6
 
 # Install VitalPBX
 mkdir -p /etc/ombutel
