@@ -58,6 +58,13 @@ yum clean all
 rm -rf /var/cache/yum
 yum -y update
 
+#Install MariaDB (MySQL)
+yum install mariadb-server -y
+systemctl enable mariadb
+rm -rf /etc/my.cnf.d/ombutel.cnf
+wget -P /etc/my.cnf.d/ https://raw.githubusercontent.com/VitalPBX/raspberry/master/resources/ombutel.cnf
+systemctl start mariadb
+
 # Install VitalPBX pre-requisites
 rm -rf pack_list
 wget https://raw.githubusercontent.com/VitalPBX/raspberry/master/resources/pack_list
