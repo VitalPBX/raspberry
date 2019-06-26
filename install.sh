@@ -40,7 +40,7 @@ rm -rf /var/cache/yum
 mkdir -p /usr/share/ombutel/monitor
 rm -f /usr/share/ombutel/monitor/vpbx
 wget -P /usr/share/ombutel/monitor/ https://raw.githubusercontent.com/VitalPBX/raspberry/master/resources/vpbx
-chmod +x usr/share/ombutel/monitor/vpbx
+chmod +x /usr/share/ombutel/monitor/vpbx
 
 #Download required repositories
 rm -rf /etc/yum.repos.d/vitalpbx.repo
