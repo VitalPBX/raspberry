@@ -22,7 +22,7 @@ Password: centos
 
 d.-Now let's expand to the maximum capacity the SD
 <pre>
-[root@localhost ~]# /usr/bin/rootfs-expand
+/usr/bin/rootfs-expand
 </pre>
 
 ## How to Install
