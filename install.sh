@@ -77,7 +77,7 @@ ln -sf /usr/lib/libstdc++.so.6.0.22 /usr/lib/libstdc++.so.6
 
 # Manually Install PJSIP
 rm -f asterisk-pjsip-16.4.0-1.armv7hl.rpm
-wget http://repo.telesoftsa.com/vitalpbx/rpms/armhfp/asterisk-pjsip-16.4.0-1.armv7hl.rpm
+wget http://repo.vitalpbx.org/vitalpbx/rpms/armhfp/asterisk-pjsip-16.4.0-1.armv7hl.rpm
 rpm -ivh asterisk-pjsip-16.4.0-1.armv7hl.rpm --nodeps
 rm -f asterisk-pjsip-16.4.0-1.armv7hl.rpm
 
